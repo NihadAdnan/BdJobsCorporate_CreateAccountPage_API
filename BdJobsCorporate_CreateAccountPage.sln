@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdJobsCorporate_CreateAccountPage.API", "BdJobsCorporate_CreateAccountPage.API\BdJobsCorporate_CreateAccountPage.API.csproj", "{C23E4A22-52D6-4251-9279-87102CD47ABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdJobsCorporate_CreateAccountPage.AggregateRoot", "BdJobsCorporate_CreateAccountPage.AggregateRoot\BdJobsCorporate_CreateAccountPage.AggregateRoot.csproj", "{5F727F02-A518-4188-84ED-B8097D272E34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdJobsCorporate_CreateAccountPage.Handler", "BdJobsCorporate_CreateAccountPage.Handler\BdJobsCorporate_CreateAccountPage.Handler.csproj", "{CB365314-963E-49A5-811B-852A80C3BFD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdJobsCorporate_CreateAccountPage.Repository", "BdJobsCorporate_CreateAccountPage.Repository\BdJobsCorporate_CreateAccountPage.Repository.csproj", "{11163876-FD06-4754-894B-DA91BB87A079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdJobsCorporate_CreateAccountPage.DTO", "BdJobsCorporate_CreateAccountPage.DTO\BdJobsCorporate_CreateAccountPage.DTO.csproj", "{9A1A162E-4EDD-48B3-ACCB-0F9C578E9B2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C23E4A22-52D6-4251-9279-87102CD47ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C23E4A22-52D6-4251-9279-87102CD47ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C23E4A22-52D6-4251-9279-87102CD47ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C23E4A22-52D6-4251-9279-87102CD47ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F727F02-A518-4188-84ED-B8097D272E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F727F02-A518-4188-84ED-B8097D272E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F727F02-A518-4188-84ED-B8097D272E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F727F02-A518-4188-84ED-B8097D272E34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB365314-963E-49A5-811B-852A80C3BFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB365314-963E-49A5-811B-852A80C3BFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB365314-963E-49A5-811B-852A80C3BFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB365314-963E-49A5-811B-852A80C3BFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11163876-FD06-4754-894B-DA91BB87A079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11163876-FD06-4754-894B-DA91BB87A079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11163876-FD06-4754-894B-DA91BB87A079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11163876-FD06-4754-894B-DA91BB87A079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1A162E-4EDD-48B3-ACCB-0F9C578E9B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1A162E-4EDD-48B3-ACCB-0F9C578E9B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1A162E-4EDD-48B3-ACCB-0F9C578E9B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1A162E-4EDD-48B3-ACCB-0F9C578E9B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F05FCF2-0B6F-44BB-A49E-C6F105EE598F}
+	EndGlobalSection
+EndGlobal
