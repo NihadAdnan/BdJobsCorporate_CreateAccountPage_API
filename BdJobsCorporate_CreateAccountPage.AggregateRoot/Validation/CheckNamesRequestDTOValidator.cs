@@ -6,18 +6,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BdJobsCorporate_CreateAccountPage.AggregateRoot.Validation
+public class CheckNamesRequestDTOValidator : AbstractValidator<CheckNamesRequestDTO>
 {
-    public class CheckNamesRequestDTOValidator : AbstractValidator<CheckNamesRequestDTO>
+    public CheckNamesRequestDTOValidator()
     {
-        public CheckNamesRequestDTOValidator()
+        RuleFor(x => x.CheckFor)
+            .NotEmpty().WithMessage("CheckFor is required.")
+            .Must(x => x == "c" || x == "u").WithMessage("CheckFor must be either 'c' for company or 'u' for username.");
+
+        When(x => x.CheckFor == "u", () =>
         {
             RuleFor(x => x.UserName)
-                .NotEmpty().WithMessage("UserName is required.")
+                .NotEmpty().WithMessage("UserName is required when checking for a username.")
                 .Length(3, 20).WithMessage("UserName must be between 3 and 20 characters.");
+        });
 
+        When(x => x.CheckFor == "c", () =>
+        {
             RuleFor(x => x.CompanyName)
-                .NotEmpty().WithMessage("CompanyName is required.");
-        }
+                .NotEmpty().WithMessage("CompanyName is required when checking for a company.");
+        });
     }
 }
