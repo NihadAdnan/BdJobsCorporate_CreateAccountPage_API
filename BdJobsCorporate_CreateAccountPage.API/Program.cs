@@ -22,6 +22,11 @@ builder.Services.AddScoped<CheckNamesHandler>();
 builder.Services.AddScoped<ICheckNamesHandler, CheckNamesHandler>();
 builder.Services.AddScoped<IValidator<CheckNamesRequestDTO>, CheckNamesRequestDTOValidator>();
 
+builder.Services.AddScoped<IIndustryTypeHandler, IndustryTypeHandler>();
+builder.Services.AddScoped<IValidator<IndustryTypeRequestDTO>, IndustryTypeRequestDTOValidator>();
+
+builder.Services.AddScoped<IRLNoHandler, RLNoHandler>();
+builder.Services.AddScoped<IValidator<RLNoRequestDTO>, RLDTOValidator>();
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
