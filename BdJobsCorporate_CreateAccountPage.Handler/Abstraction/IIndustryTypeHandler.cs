@@ -1,4 +1,5 @@
-﻿using BdJobsCorporate_CreateAccountPage.DTO.DTOs;
+﻿using BdJobsCorporate_CreateAccountPage.AggregateRoot.Entities;
+using BdJobsCorporate_CreateAccountPage.DTO.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace BdJobsCorporate_CreateAccountPage.Handler.Abstraction
     public interface IIndustryTypeHandler
     {
         Task<List<IndustryTypeResponseDTO>> HandleIndustryTypeAsync(IndustryTypeRequestDTO request);
+        Task<IEnumerable<IndustryType>> GetAllIndustrieIdsAsync();
     }
 }

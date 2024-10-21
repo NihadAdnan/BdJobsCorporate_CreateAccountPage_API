@@ -1,4 +1,5 @@
-﻿using BdJobsCorporate_CreateAccountPage.DTO.DTOs;
+﻿using BdJobsCorporate_CreateAccountPage.AggregateRoot.Entities;
+using BdJobsCorporate_CreateAccountPage.DTO.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace BdJobsCorporate_CreateAccountPage.Repository.Repository.Abstraction
     {
         Task<bool> IsUserNameExistAsync(string userName);
         Task<bool> IsCompanyExistAsync(string companyName);
+        Task<IEnumerable<IndustryType>> GetAllIndustrieIdsAsync();
         Task<List<IndustryTypeResponseDTO>> GetIndustryTypesAsync(int? industryId, string organizationText = null, int? corporateID = null);
         Task<RLNoDataDTO> GetRLNoDataAsync(string rlNo);
     }

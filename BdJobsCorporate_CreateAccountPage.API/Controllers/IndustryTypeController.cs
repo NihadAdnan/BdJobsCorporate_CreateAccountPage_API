@@ -42,5 +42,33 @@ namespace BdJobsCorporate_CreateAccountPage.API.Controllers
                 return BadRequest(errorResponse);
             }
         }
+
+        // New GET action to retrieve all industry IDs
+        [HttpGet("GetAllIndustrieIds")]
+        public async Task<IActionResult> GetAllIndustrieIdsAsync()
+        {
+            try
+            {
+                var industryIds = await _industryTypeHandler.GetAllIndustrieIdsAsync();
+
+                var response = new
+                {
+                    Error = "0",
+                    IndustryIds = industryIds.Any() ? (object)industryIds : null
+                };
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var errorResponse = new
+                {
+                    Error = "1",
+                    Message = ex.Message
+                };
+
+                return BadRequest(errorResponse);
+            }
+        }
     }
 }

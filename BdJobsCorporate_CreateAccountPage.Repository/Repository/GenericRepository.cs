@@ -1,4 +1,5 @@
-﻿using BdJobsCorporate_CreateAccountPage.DTO.DTOs;
+﻿using BdJobsCorporate_CreateAccountPage.AggregateRoot.Entities;
+using BdJobsCorporate_CreateAccountPage.DTO.DTOs;
 using BdJobsCorporate_CreateAccountPage.Repository.Data;
 using BdJobsCorporate_CreateAccountPage.Repository.Repository.Abstraction;
 using Dapper;
@@ -66,6 +67,22 @@ namespace BdJobsCorporate_CreateAccountPage.Repository.Repository
                 .Replace(")", "")
                 .ToLower();
         }
+
+        public async Task<IEnumerable<IndustryType>> GetAllIndustrieIdsAsync()
+        {
+            using (var dbConnection = _context.CreateConnection())
+            {
+               
+                dbConnection.Open(); 
+
+                string query = "SELECT IndustryId, IndustryName FROM IndustryTypes WHERE IndustryId > 0 ORDER BY IndustryName";
+
+                var industries = await dbConnection.QueryAsync<IndustryType>(query);
+                return industries;
+            }
+        }
+
+
 
         public async Task<List<IndustryTypeResponseDTO>> GetIndustryTypesAsync(int? industryId, string organizationText = null, int? corporateID = null)
         {
