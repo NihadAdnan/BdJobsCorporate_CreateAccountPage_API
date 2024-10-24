@@ -16,16 +16,10 @@ namespace BdJobsCorporate_CreateAccountPage.API.Controllers
             _checkNamesHandler = checkNamesHandler;
         }
 
-        // POST method for checking names
         [HttpPost("CheckNames")]
         public async Task<IActionResult> CheckNames([FromBody] CheckNamesRequestDTO request)
         {
             var response = await _checkNamesHandler.Handle(request);
-            if (!string.IsNullOrEmpty(response.Message))
-            {
-                return BadRequest(response);
-            }
-
             return Ok(response);
         }
     }
