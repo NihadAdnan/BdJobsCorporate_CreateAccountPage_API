@@ -99,7 +99,7 @@ namespace BdJobsCorporate_CreateAccountPage.Repository.Repository
                 var parameters = new DynamicParameters();
 
                 // Modify query based on input parameters
-                if (industryId.HasValue && industryId.Value > 0)
+                if (industryId.HasValue)
                 {
                     sql += " AND IndustryId = @IndustryId";
                     parameters.Add("IndustryId", industryId.Value, DbType.Int32);
